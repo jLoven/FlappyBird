@@ -14,6 +14,12 @@
 		ED232D941A43C9170008A6D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED232D931A43C9170008A6D2 /* Images.xcassets */; };
 		ED232D971A43C9180008A6D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED232D951A43C9180008A6D2 /* LaunchScreen.xib */; };
 		ED232DA31A43C9180008A6D2 /* Flappy_BirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED232DA21A43C9180008A6D2 /* Flappy_BirdTests.m */; };
+		ED232DBD1A43DCA70008A6D2 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = ED232DBC1A43DCA70008A6D2 /* Game.m */; };
+		ED232DC31A43E0310008A6D2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = ED232DBE1A43E0310008A6D2 /* background.png */; };
+		ED232DC41A43E0310008A6D2 /* bird_down.png in Resources */ = {isa = PBXBuildFile; fileRef = ED232DBF1A43E0310008A6D2 /* bird_down.png */; };
+		ED232DC51A43E0310008A6D2 /* bird_up.png in Resources */ = {isa = PBXBuildFile; fileRef = ED232DC01A43E0310008A6D2 /* bird_up.png */; };
+		ED232DC61A43E0310008A6D2 /* game_background.png in Resources */ = {isa = PBXBuildFile; fileRef = ED232DC11A43E0310008A6D2 /* game_background.png */; };
+		ED232DC71A43E0310008A6D2 /* tunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = ED232DC21A43E0310008A6D2 /* tunnel.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,13 @@
 		ED232D9C1A43C9180008A6D2 /* Flappy BirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy BirdTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED232DA11A43C9180008A6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED232DA21A43C9180008A6D2 /* Flappy_BirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flappy_BirdTests.m; sourceTree = "<group>"; };
+		ED232DBB1A43DCA70008A6D2 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../Game.h; sourceTree = "<group>"; };
+		ED232DBC1A43DCA70008A6D2 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = ../Game.m; sourceTree = "<group>"; };
+		ED232DBE1A43E0310008A6D2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		ED232DBF1A43E0310008A6D2 /* bird_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird_down.png; sourceTree = "<group>"; };
+		ED232DC01A43E0310008A6D2 /* bird_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird_up.png; sourceTree = "<group>"; };
+		ED232DC11A43E0310008A6D2 /* game_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_background.png; sourceTree = "<group>"; };
+		ED232DC21A43E0310008A6D2 /* tunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tunnel.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +98,8 @@
 				ED232D8B1A43C9170008A6D2 /* AppDelegate.m */,
 				ED232D8D1A43C9170008A6D2 /* ViewController.h */,
 				ED232D8E1A43C9170008A6D2 /* ViewController.m */,
+				ED232DBB1A43DCA70008A6D2 /* Game.h */,
+				ED232DBC1A43DCA70008A6D2 /* Game.m */,
 				ED232D901A43C9170008A6D2 /* Main.storyboard */,
 				ED232D931A43C9170008A6D2 /* Images.xcassets */,
 				ED232D951A43C9180008A6D2 /* LaunchScreen.xib */,
@@ -96,6 +111,11 @@
 		ED232D861A43C9170008A6D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ED232DBE1A43E0310008A6D2 /* background.png */,
+				ED232DBF1A43E0310008A6D2 /* bird_down.png */,
+				ED232DC01A43E0310008A6D2 /* bird_up.png */,
+				ED232DC11A43E0310008A6D2 /* game_background.png */,
+				ED232DC21A43E0310008A6D2 /* tunnel.png */,
 				ED232D871A43C9170008A6D2 /* Info.plist */,
 				ED232D881A43C9170008A6D2 /* main.m */,
 			);
@@ -199,9 +219,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED232DC41A43E0310008A6D2 /* bird_down.png in Resources */,
 				ED232D921A43C9170008A6D2 /* Main.storyboard in Resources */,
+				ED232DC31A43E0310008A6D2 /* background.png in Resources */,
+				ED232DC71A43E0310008A6D2 /* tunnel.png in Resources */,
+				ED232DC51A43E0310008A6D2 /* bird_up.png in Resources */,
 				ED232D971A43C9180008A6D2 /* LaunchScreen.xib in Resources */,
 				ED232D941A43C9170008A6D2 /* Images.xcassets in Resources */,
+				ED232DC61A43E0310008A6D2 /* game_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +247,7 @@
 				ED232D8F1A43C9170008A6D2 /* ViewController.m in Sources */,
 				ED232D8C1A43C9170008A6D2 /* AppDelegate.m in Sources */,
 				ED232D891A43C9170008A6D2 /* main.m in Sources */,
+				ED232DBD1A43DCA70008A6D2 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +372,7 @@
 				INFOPLIST_FILE = "Flappy Bird/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,6 +383,7 @@
 				INFOPLIST_FILE = "Flappy Bird/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
