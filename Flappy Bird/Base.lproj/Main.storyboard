@@ -84,6 +84,18 @@
                                     <action selector="StartGame:" destination="9Tf-Mb-f9I" eventType="touchUpInside" id="1CS-Zw-ypi"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="JqN-Ud-Mfv">
+                                <rect key="frame" x="279" y="-345" width="53" height="500"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-Kh-ZkF">
+                                <rect key="frame" x="279" y="294" width="53" height="500"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="mLn-fL-2B3">
+                                <rect key="frame" x="0.0" y="575" width="600" height="25"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cku-Nx-py7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="25"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -101,5 +113,6 @@
         <image name="background.png" width="320" height="480"/>
         <image name="bird_up.png" width="40" height="40"/>
         <image name="game_background.png" width="320" height="480"/>
+        <image name="tunnel.png" width="50" height="100"/>
     </resources>
 </document>

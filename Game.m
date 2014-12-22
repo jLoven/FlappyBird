@@ -34,12 +34,37 @@
     //  BirdFlight was the int from Game.h.
     Bird.center = CGPointMake(Bird.center.x, Bird.center.y - BirdFlight);
     
+    //  Bird should start falling after it rises a bit.
+    //  Every 0.05 seconds, we take 5 away from BirdFlight.
+    //  When it becomes negative, it will start to fall.
+    BirdFlight = BirdFlight - 5;
+    
+    if (BirdFlight < -15) {
+        //  Limit how fast it goes down to -15.
+        BirdFlight = -15;
+    }
+    
+    //  Want to change the bird image depending on negative or positive BirdFlight.
+    //  Moving up (positive number):
+    if (BirdFlight > 0) {
+        Bird.image = [UIImage imageNamed: @"bird_up.png"];
+    }
+    
+    //  Moving down (negative number):
+    if (BirdFlight < 0) {
+        Bird.image = [UIImage imageNamed: @"bird_down.png"];
+    }
+    
 }
 
 
-
-
-
+//  When we tap on the screen, use this XCode function:
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    //  When we tap the screen, the y-coordinate goes down by 30, making the bird move up.
+    BirdFlight = 30;
+    
+}
 
 
 - (void)viewDidLoad {
