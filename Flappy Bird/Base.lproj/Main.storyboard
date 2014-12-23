@@ -71,11 +71,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="512-T5-fXj">
                                 <rect key="frame" x="0.0" y="0.0" width="610" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="5t6-8V-7XM">
-                                <rect key="frame" x="48" y="280" width="40" height="40"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-JG-jNp">
-                                <rect key="frame" x="215" y="99" width="181" height="97"/>
+                                <rect key="frame" x="215" y="148" width="181" height="97"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Start Game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -85,10 +82,10 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="JqN-Ud-Mfv">
-                                <rect key="frame" x="279" y="-345" width="53" height="500"/>
+                                <rect key="frame" x="420" y="-336" width="53" height="500"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-Kh-ZkF">
-                                <rect key="frame" x="279" y="294" width="53" height="500"/>
+                                <rect key="frame" x="420" y="291" width="53" height="500"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="mLn-fL-2B3">
                                 <rect key="frame" x="0.0" y="575" width="600" height="25"/>
@@ -96,12 +93,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cku-Nx-py7">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="25"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="5t6-8V-7XM">
+                                <rect key="frame" x="110" y="252" width="40" height="40"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="Bird" destination="5t6-8V-7XM" id="GRJ-xS-nrb"/>
+                        <outlet property="BottomBarrier" destination="mLn-fL-2B3" id="pzm-L2-l5w"/>
+                        <outlet property="BottomTunnel" destination="gdx-Kh-ZkF" id="FzX-Am-Uh8"/>
                         <outlet property="StartGame" destination="xC9-JG-jNp" id="wQn-SM-mjv"/>
+                        <outlet property="TopBarrier" destination="Cku-Nx-py7" id="5at-GJ-UbG"/>
+                        <outlet property="TopTunnel" destination="JqN-Ud-Mfv" id="tb2-ps-2da"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCu-3h-zMo" userLabel="First Responder" sceneMemberID="firstResponder"/>

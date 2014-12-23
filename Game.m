@@ -20,11 +20,19 @@
     
     //  Want the button to disappear upon pressing:
     StartGame.hidden = YES;
+    //  Want the tunnels to appear:
+    TopTunnel.hidden = NO;
+    BottomTunnel.hidden = NO;
     
     //  Start the timer for moving the bird (name was BirdMovement from Game.h):
     //  Every 0.05 seconds, the bird will move a few pixels. "Naught point naught five" LOL
     
     BirdMovement = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(BirdMoving) userInfo:nil repeats:YES];
+    
+    [self PlaceTunnels]; //  Runs the method PlaceTunnels when the game starts.
+    
+    //  make a new timer for the tunnel movemebt
+    TunnelMovement = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(TunnelMoving) userInfo:nil repeats:YES];
     
 }
 
@@ -57,7 +65,6 @@
     
 }
 
-
 //  When we tap on the screen, use this XCode function:
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
@@ -66,8 +73,43 @@
     
 }
 
+-(void)PlaceTunnels{
+    
+    //  Want to place the tunnels on the right of the screen, so when they are first placed, you won't see them.
+    //  First set it to a random position between 0 and 349:
+    RandomTopTunnelPosition = arc4random() % 350;
+    //  Now set it to the same range, but between -228 and 122:
+    RandomTopTunnelPosition = RandomTopTunnelPosition - 228;
+    //  Now leave a gap between the tunnels:
+    BottomTunnelPosition = RandomTopTunnelPosition + 655;
+    
+    //  340 is x-position so that it appears just off the screen.
+    //  Set the TopTunnel position by changing the y-coordinate to the variables above:
+    TopTunnel.center = CGPointMake(340, RandomTopTunnelPosition);
+    BottomTunnel.center = CGPointMake(340, BottomTunnelPosition);
+    
+}
+
+- (void)TunnelMoving{
+    
+    //  Tunnels need to generate on the right and disappear on the left
+    //  Take one away from the x-coordiante every time this method is called
+    //  Since it's on a timer that fires every 0.01 seconds, it will move left smoothly.
+    TopTunnel.center = CGPointMake(TopTunnel.center.x - 1, TopTunnel.center.y);
+    BottomTunnel.center = CGPointMake(BottomTunnel.center.x - 1, BottomTunnel.center.y);
+    
+    //  Now make them go back to the right side if they go off the screen:
+    if (TopTunnel.center.x < -28) {
+        [self PlaceTunnels];
+    }
+    
+}
 
 - (void)viewDidLoad {
+    
+    TopTunnel.hidden = YES;
+    BottomTunnel.hidden = YES;
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-int BirdFlight; 
+int BirdFlight;
+int RandomTopTunnelPosition;
+int BottomTunnelPosition;
 
 @interface Game : UIViewController
 {
@@ -17,10 +19,18 @@ int BirdFlight;
     //  we are affecting them with code.
     IBOutlet UIImageView *Bird;
     IBOutlet UIButton *StartGame;
+    //  Need to delcare tunnels because we will be moving them and
+    //  colliding with them.
+    IBOutlet UIImageView *TopTunnel; //  He calls this TunnelTop in the tutorial.
+    IBOutlet UIImageView *BottomTunnel;
+    IBOutlet UIImageView *TopBarrier; //  He calls this Top in the tutorial.
+    IBOutlet UIImageView *BottomBarrier;
     
     //  Also need to initialize a timer for the flapping bird
     //  in Game.m.
     NSTimer *BirdMovement;
+    //  Another timer for the movement of the tunnels:
+    NSTimer *TunnelMovement;
     
 }
 
@@ -28,5 +38,9 @@ int BirdFlight;
 //  code will run.
 -(IBAction)StartGame:(id)sender;
 -(void)BirdMoving;
+
+//  Need methods for tunnels:
+-(void)TunnelMoving;
+-(void)PlaceTunnels; //  Use to place the tunnels and the gap randomly.
 
 @end
