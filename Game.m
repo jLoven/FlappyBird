@@ -90,10 +90,10 @@
     
 }
 
-- (void)TunnelMoving{
+-(void)TunnelMoving{
     
-    //  Tunnels need to generate on the right and disappear on the left
-    //  Take one away from the x-coordiante every time this method is called
+    //  Tunnels need to generate on the right and disappear on the left.
+    //  Take one away from the x-coordiante every time this method is called.
     //  Since it's on a timer that fires every 0.01 seconds, it will move left smoothly.
     TopTunnel.center = CGPointMake(TopTunnel.center.x - 1, TopTunnel.center.y);
     BottomTunnel.center = CGPointMake(BottomTunnel.center.x - 1, BottomTunnel.center.y);
@@ -103,7 +103,22 @@
         [self PlaceTunnels];
     }
     
+    if (TopTunnel.center.x == 89) {
+        //  The bird has flown through the gap because the tunnels have reached past the bird.
+        //  The user gets a point.
+        [self Score];
+    }
 }
+
+-(void)Score{
+    //  Want to add one to the score and display it in the label.
+    ScoreNumber = ScoreNumber + 1;
+    //  The percent-i tells XCode that we want to display an integer in this label (ScoreNumber):
+    ScoreLabel.text = [NSString stringWithFormat:@"%i", ScoreNumber];
+    //  NSString *ScoreString = [NSString stringWithFormat:@"%d", ScoreNumber];
+    //  ScoreLabel.text = ScoreString;
+}
+
 
 - (void)viewDidLoad {
     
@@ -111,7 +126,11 @@
     BottomTunnel.hidden = YES;
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //  Hide the exit button, because you only want it to appear at the end of the game.
+    Exit.hidden = YES;
+    //  Set the score to be 0 at the beginning of the game.
+    ScoreNumber = 0;
 }
 
 - (void)didReceiveMemoryWarning {

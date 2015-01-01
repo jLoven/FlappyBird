@@ -11,6 +11,8 @@
 int BirdFlight;
 int RandomTopTunnelPosition;
 int BottomTunnelPosition;
+int ScoreNumber;
+NSInteger HighScoreNumber;
 
 @interface Game : UIViewController
 {
@@ -25,6 +27,10 @@ int BottomTunnelPosition;
     IBOutlet UIImageView *BottomTunnel;
     IBOutlet UIImageView *TopBarrier; //  He calls this Top in the tutorial.
     IBOutlet UIImageView *BottomBarrier;
+    
+    //  Button and label for exiting and score:
+    IBOutlet UILabel *ScoreLabel;
+    IBOutlet UIButton *Exit;
     
     //  Also need to initialize a timer for the flapping bird
     //  in Game.m.
@@ -42,5 +48,9 @@ int BottomTunnelPosition;
 //  Need methods for tunnels:
 -(void)TunnelMoving;
 -(void)PlaceTunnels; //  Use to place the tunnels and the gap randomly.
+
+//  Need a method to change the score:
+-(void)Score;
+-(void)GameOver;
 
 @end
