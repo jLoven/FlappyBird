@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tunnel.png" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-Kh-ZkF">
-                                <rect key="frame" x="89" y="289" width="53" height="500"/>
+                                <rect key="frame" x="420" y="289" width="53" height="500"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -121,7 +121,7 @@
                         <outlet property="BottomBarrier" destination="mLn-fL-2B3" id="pzm-L2-l5w"/>
                         <outlet property="BottomTunnel" destination="gdx-Kh-ZkF" id="FzX-Am-Uh8"/>
                         <outlet property="Exit" destination="TEu-Oy-VTk" id="7sE-RB-IoV"/>
-                        <outlet property="ScoreLabel" destination="6ZP-dd-C6y" id="Uug-1c-B86"/>
+                        <outlet property="ScoreLabel" destination="6ZP-dd-C6y" id="mXm-mk-BWG"/>
                         <outlet property="StartGame" destination="xC9-JG-jNp" id="wQn-SM-mjv"/>
                         <outlet property="TopBarrier" destination="Cku-Nx-py7" id="5at-GJ-UbG"/>
                         <outlet property="TopTunnel" destination="JqN-Ud-Mfv" id="tb2-ps-2da"/>

@@ -103,11 +103,29 @@
         [self PlaceTunnels];
     }
     
-    if (TopTunnel.center.x == 89) {
+    if (BottomTunnel.center.x == 89) {
         //  The bird has flown through the gap because the tunnels have reached past the bird.
         //  The user gets a point.
         [self Score];
     }
+    
+    //  If the bird has collided with anything, run GameOver:
+    if (CGRectIntersectsRect(Bird.frame, TopTunnel.frame)) {
+        [self GameOver];
+    }
+    
+    if (CGRectIntersectsRect(Bird.frame, BottomTunnel.frame)) {
+        [self GameOver];
+    }
+    
+    if (CGRectIntersectsRect(Bird.frame, TopBarrier.frame)) {
+        [self GameOver];
+    }
+    
+    if (CGRectIntersectsRect(Bird.frame, BottomBarrier.frame)) {
+        [self GameOver];
+    }
+    
 }
 
 -(void)Score{
@@ -119,6 +137,18 @@
     //  ScoreLabel.text = ScoreString;
 }
 
+-(void)GameOver{
+    //  Need to stop timers, hide the tunnels and the bird, and display Exit button.
+    //  Stop two timers:
+    [TunnelMovement invalidate];
+    [BirdMovement invalidate];
+    
+    //  Show button, hide tunnels and bird:
+    Exit.hidden = NO;
+    TopTunnel.hidden = YES;
+    BottomTunnel.hidden = YES;
+    Bird.hidden = YES;
+}
 
 - (void)viewDidLoad {
     
